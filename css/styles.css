@@ -8,7 +8,7 @@ html,body{
  width: 100%;
  height: 100%;
 }
-header{
+body{
 	position:relative;
 	width:100%;
 	height:100%;
@@ -18,48 +18,62 @@ header{
 	background-position: center;
 	background-attachment: fixed;
 }
-#botoninicial{
-	width:30%;
-	position:absolute;
-	top: 50%;
-	right: 40%;
-	display: block;
-	padding: 5px 4px;
-	border: 1px solid white;
-	text-align: center;
-	font-size: x-large;
-	color: white;
-	transition: all 1s;
+header{
+    width: 100%;
+    height: 100%;
 }
-#botoninicial:HOVER{
-	background: white;
-		color: black;
-	
+header #logo{
+    width:50%;
+    margin-top: 15%;
+    margin-left: 25%;
+}
+header h1{
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 300%;
+}
+main{
+    width:100%;
+    background: #E0E0E0;
+}
+section{
+    width: 100%;
+    
+}
+section article{
+    width: 100%;
+}
+#misconocimientos img{
+    width: 30%;
+}
+#misaptitudes img{
+    width: 10%;
+}
+#misredes img{
+    width: 40%;
+    margin: 0 4.3%;
+    
+}
+#misredes #linkedin{
+    margin: 0 25%;
 }
 
-#apartados{
-	width:100%;
-	line-height: 5em;
-	
-}
-#apartados ul li{
-	border-bottom: 1px solid black;
-	
-}
-#apartados ul li:hover{
-	background-color: rgba(0,0,0,0.1);
-}
-@media screen and (min-width: 650px){
-	header{
-		background-image: url("../img/fondo_escritorio.jpg");
-	}
-	#botoninicial{
-		border: 1px solid black;
-		color: black; 
-	}
-}
-#botoninicial:HOVER {
-	background: black;
-	color: white;
+@media screen and (min-width:650px){
+    body{
+        background-image: url(../img/fondo_escritorio.jpg);}
+    header h1{
+        
+        color:black;
+    }
+    section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section article{
+        width: 49.8%;
+        border: 1px solid black;
+    }
 }
 
