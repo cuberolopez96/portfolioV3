@@ -28,6 +28,12 @@ header#titulo #logo{
     margin-top: 15%;
     margin-left: 25%;
 }
+header #flecha{
+    width: 20%;
+    transform: rotate(90deg);
+    margin-left: 40%;
+    margin-top: 20%;
+}
 header#titulo h1{
     width: 100%;
     text-align: center;
@@ -36,6 +42,8 @@ header#titulo h1{
 }
 main{
     width:100%;
+    min-height: 100%;
+    line-height: 1em;
     background: #E0E0E0;
 }
 section{
@@ -47,12 +55,11 @@ section article{
 }
 section article header{
     line-height: 2em;
-    text-align: center;
-    font-size: 210%;
-}
-#yosoy {
+    text-align: justify;
+    font-size: 185%;
     
 }
+
 #yosoy img{
     display: block;
     margin: 0 auto;
@@ -62,12 +69,19 @@ section article header{
     
 }
 #yosoy div{
-    font-size: 1.5em;
+   padding: 3px;
     width: 90%;
     margin: 0 auto;
+    overflow: hidden;
+    text-align: justify;
+
 }
 #yosoy div p{
     padding: 1em 1em;
+}
+#misconocimientos div{
+    width: 90%;
+    margin: 1em auto;
 }
 
 #misconocimientos img{
@@ -77,9 +91,16 @@ section article header{
 #misaptitudes div{
     width: 90%;
     margin: 0 auto;
+    font-size:1.5em;
 }
 #misaptitudes img{
     width: 10%;
+    
+    
+}
+#misredes div{
+    width: 90%;
+    margin: 1em auto;
     
 }
 
@@ -92,21 +113,38 @@ section article header{
     margin: 0 25%;
 }
 
-@media screen and (min-width:750px){
+@media screen and (min-width:650px){
     body{
         background-image: url(../img/fondo_escritorio.jpg);}
-    header h1{
+    header#titulo #logo{
+        display: none;
+    }
+    header#titulo h1{
         
         color:black;
     }
+    main{
+        margin: 0 auto;
+        box-shadow: 0 0 10px;
+    }
     section{
+        width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: wrap;
     }
     section article{
-        width: 49.8%;
-        border: 1px solid black;
+        display: none;
+        width: 50%;
+           box-shadow: 0 0 10px;
+    }
+    section article header{
+        text-align: center;
+    }
+    #yosoy div p{
+        margin: 1em auto;
+        font-size: 1.5em;
+        line-height: 30px;
     }
 }
 
