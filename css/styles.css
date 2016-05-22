@@ -119,6 +119,11 @@ section article header{
     header#titulo #logo{
         display: none;
     }
+    header#titulo #flecha{
+        width: 5%;
+        margin-top: 2%;
+        margin-left: 50%;
+    }
     header#titulo h1{
         
         color:black;

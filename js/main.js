@@ -1,6 +1,8 @@
 (function(){
    $(document).ready(function(){
-       
+       $("#flecha").click(function(){
+           $('body,html').animate({scrollTop:$('#titulo').height()},1000);
+       })
        if(window.innerWidth <= 650){
            $('#misaptitudes div').hide(500);
         $('#misconocimientos div').hide(500);
