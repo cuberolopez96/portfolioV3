@@ -1,56 +1,69 @@
 (function(){
    $(document).ready(function(){
-       $("#flecha").click(function(){
+       var active = false;
+       
+       if(window.innerWidth <= 900){
+           $("#flecha").click(function(){
            $('body,html').animate({scrollTop:$('#titulo').height()},1000);
-       })
-       if(window.innerWidth <= 650){
-           $('#misaptitudes div').hide(500);
-        $('#misconocimientos div').hide(500);
-        $('#misredes div').hide(500);
+       });
+           $('#misaptitudes div').fadeOut(500);
+        $('#misconocimientos div').fadeOut(500);
+        $('#misredes div').fadeOut(500);
         $('#misconocimientos header ').mouseenter(function(){
-            $('#misconocimientos div').show(1000);
-            $('#yosoy div').hide(1000);
-            $('#misaptitudes div').hide(1000);
-            $('#misredes div').hide(1000);
+            $('#misconocimientos div').slideDown(1000);
+            $('#yosoy div').slideUp(1000);
+            $('#misaptitudes div').slideUp(1000);
+            $('#misredes div').slideUp(1000);
         })
         $('#misaptitudes header').mouseenter(function(){
-            $('#misconocimientos div').hide(1000);
-            $('#misaptitudes div').show(1000);
-            $('#misredes div').hide(1000);
-            $('#yosoy div').hide(1000);
+            $('#misconocimientos div').slideUp(1000);
+            $('#misaptitudes div').slideDown(1000);
+            $('#misredes div').slideUp(1000);
+            $('#yosoy div').slideUp(1000);
         });
          $('#misredes header').mouseenter(function(){
-            $('#yosoy  div').hide(1000); 
-            $('#misredes div').show(1000);
-            $('#misconocimientos div').hide(1000);
-            $('#misaptitudes div').hide(1000); 
+            $('#yosoy  div').slideUp(1000); 
+            $('#misredes div').slideDown(1000);
+            $('#misconocimientos div').slideUp(1000);
+            $('#misaptitudes div').slideUp(1000); 
         });
         $('#yosoy header').mouseenter(function(){
-           $('#yosoy div').show(1000);
-            $('#misconocimientos div').hide(1000);
-            $('#misaptitudes div').hide(1000);
-            $('#misredes div').hide(1000);
+           $('#yosoy div').slideDown(1000);
+            $('#misconocimientos div').slideUp(1000);
+            $('#misaptitudes div').slideUp(1000);
+            $('#misredes div').slideUp(1000);
             
         });
         
        }else{
           
            $('#titulo #logo').show(1000).delay(1000);
-            $('main').mouseenter(function(){
-                $('#yosoy').show(1000)
+           $("#flecha").click(function(){
+           $('main').slideDown(1000); 
+            setTimeout(function(){
+                $('body,html').animate({scrollTop:$('#titulo').height()},1000);
+            },1000);
+            if(active==false){
+                    $('#yosoy').fadeIn(1000)
                 setTimeout(function(){
-                    $('#misconocimientos').show(1000).delay(1000);
+                    $('#misconocimientos').fadeIn(1000).delay(1000);
                 },1000);
+               
                 setTimeout(function(){
-                    $('#misaptitudes').show(1000).delay(1000);
+                    $('#misaptitudes').fadeIn(1000).delay(1000);
                 },2000);
                 setTimeout(function(){
-                    $('#misredes').show(1000).delay(1000);
+                    $('#misredes').fadeIn(1000).delay(1000);
                 },3000);
+                   active = true;
+               }    
+       });
+            
+               
                 
                 
                 
-            })
+            
        }
    })
     
