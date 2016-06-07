@@ -105,7 +105,7 @@ span.icon{
 
 #misconocimientos img{
     width: 25%;
-    margin: 0.5em 0.5em;
+    margin: 0.5em 0.6em;
     
 }
 #misaptitudes div{
@@ -133,7 +133,11 @@ span.icon{
     margin: 0 25%;
 }
 
-
+@media screen and (min-width:590px){
+    #misconocimientos img{
+        margin: 0.5em 1.3em;
+    }
+}
 @media screen and (min-width:900px){
     body{
         background-image: url(../img/fondo_escritorio.jpg);}
@@ -141,10 +145,10 @@ span.icon{
         display: none;
     }
     header#titulo #flecha{
-        width: 10%;
+        width: 5%;
         margin-top: 3%;
         margin-bottom: 3%;
-        margin-left: 45%;
+        margin-left: 47.5%;
     }
     header#titulo h1{
         
@@ -155,7 +159,7 @@ span.icon{
         
     }
     main{
-        display: none;
+       
         min-height: 100%;
         margin: 0 auto;
         box-shadow: 0 0 10px;
@@ -169,11 +173,10 @@ span.icon{
     }
     section article{
         display: none;
-        width: 49.3%;
+        width: 50%;
         min-height: 50%;
         box-shadow: 0 0 10px;
-        border-image: url(../img/marco.svg) 30% round;
-        border-image-width: 10%;
+        
         
         
     }
@@ -183,21 +186,26 @@ span.icon{
     }
     #yosoy div p{
         margin: 1em auto;
-        font-size: 1.5em;
-        line-height: 30px;
+        font-size: 2em;
+        line-height: 1.5em;
     }
     
     #misconocimientos div{
         width:70%;
-        margin:2%  auto;
+        margin:4%  auto;
         
       
     }
     #misconocimientos img{
-        width:43%;
-        margin: 1% 3%;
+        width:40%;
+        margin: 1% 4.5%;
         
     }
+    #misaptitudes div{
+        font-size: 2em;
+    }
+    
     
 }
+
 
